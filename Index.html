@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="acWFq5i_s8W9Lqv73TXxKMRH3hi-aBNSNnWhE-NjqjA" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baloch Trader AI Bot</title>
+  <style>
+    body {
+      background-color: #0f1015;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .bot-container {
+      background: #181a20;
+      border: 2px solid #ff4d4d;
+      border-radius: 12px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+    }
+    h2 {
+      text-align: center;
+      color: #ff4d4d;
+      font-size: 18px;
+    }
+    label {
+      font-size: 11px;
+      color: #aaa;
+    }
+    .timeframe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    .time-btn {
+      background: #252830;
+      color: #fff;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .time-btn.active {
+      background: #ff4d4d;
+    }
+    select {
+      width: 100%;
+      background: #252830;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .start-btn {
+      width: 100%;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .status {
+      text-align: center;
+      margin-top: 10px;
+      color: #00ffcc;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bot-container">
+    <h2>BALOCH TRADER AI BOT</h2>
+    
+    <label>Asset / Pair:</label>
+    <select>
+      <option>USD/BDT (OTC)</option>
+    </select>
+
+    <label>Candle Time (Chart):</label>
+    <div class="timeframe-grid" id="candle-grid">
+      <button class="time-btn">5s</button>
+      <button class="time-btn active">15s</button>
+      <button class="time-btn">30s</button>
+      <button class="time-btn">1m</button>
+      <button class="time-btn">5m</button>
+      <button class="time-btn">15m</button>
+    </div>
+
+    <label>Trade / Expiry Time:</label>
+    <div class="timeframe-grid">
+      <button class="time-btn active">5s</button>
+      <button class="time-btn">15s</button>
+      <button class="time-btn">30s</button>
+      <button class="time-btn">1m</button>
+      <button class="time-btn">5m</button>
+      <button class="time-btn">15m</button>
+    </div>
+
+    <div style="font-size: 11px; color: #aaa; text-align: center; margin-top: 5px;">
+      Active: Candle: 15s | Trade: 5s
+    </div>
+
+    <button class="start-btn">START BOT</button>
+    <div class="status">Status: STANDBY</div>
+  </div>
+</body>
+</html>
